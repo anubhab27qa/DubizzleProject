@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Cucumber" time="6.418" tests="2" skipped="0" failures="2" errors="0" timestamp="2025-04-03T18:41:47.633256Z">
+<testcase classname="Verify Functionalities on Home Page" name="Search for DODGE under Motors crtiteria" time="3.412">
+<failure/>
+<system-out><![CDATA[
+Given User is on dubizzle Home page.........................................undefined
+When User clicks on MOTORs category.........................................skipped
+And User Searches for DODGE car.............................................skipped
+Then Search suggestions drop down should be visible with Dodge car options..skipped
+]]></system-out>
+</testcase>
+<testcase classname="Verify Functionalities on Home Page" name="Click on DODGE challenger from Search suggestions" time="2.838">
+<failure/>
+<system-out><![CDATA[
+Given User is on dubizzle Home page.........................................undefined
+When User clicks on MOTORs category.........................................skipped
+And User Searches for DODGE car.............................................skipped
+Then Select DODGE Challenger from suggestions drop down.....................skipped
+]]></system-out>
+</testcase>
+</testsuite>
