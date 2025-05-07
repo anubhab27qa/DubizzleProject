@@ -41,7 +41,7 @@ public class HomePagePOM {
 	@FindBy(css = "ul[class*='MuiAutocomplete-listbox']")
 	private WebElement suggestionDropdown;
 
-	@FindBy(xpath  = "//*[@data-testid='search-result']")
+	@FindBy(xpath = "//*[@data-testid='search-result']")
 	private List<WebElement> suggestionListItems;
 
 	@FindBy(css = "button[data-testid='search-button']")
@@ -66,16 +66,9 @@ public class HomePagePOM {
 		assertEquals(expectedText, homePageTitle.getText());
 	}
 
-	public void chooseCategory(String categoryName) throws InterruptedException {
-		WebElement categoryButton = wait.until(ExpectedConditions.elementToBeClickable(BaseClass.getDriver()
-				.findElement(org.openqa.selenium.By.xpath("//button[text()='" + categoryName + "']"))));
-		categoryButton.click();
-
-	}
-
 	public void keywordSearch(String searchTerm) throws InterruptedException {
 		wait.until(ExpectedConditions.elementToBeClickable(searchInput)).sendKeys(searchTerm);
-		
+
 	}
 
 	public void verifySearchSuggestions() throws InterruptedException {
