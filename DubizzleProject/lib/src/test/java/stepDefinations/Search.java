@@ -17,24 +17,19 @@ public class Search {
         searchRefinePOM=new SearchRefinePOM();
     }
 
-    @Given("User is on dubizzle Home page")
-    public void user_is_on_dubizzle_home_page() throws InterruptedException {
+    @Given("I am on dubizzle Home page")
+    public void I_am_on_dubizzle_Home_page() throws InterruptedException {
         homePagePOM.handleHomePagePopUp();
         homePagePOM.verifyHomePageTitle();
     }
 
-    @When("User clicks on {string} as category")
-    public void user_clicks_on_category(String category) throws InterruptedException {
-        homePagePOM.chooseCategory(category);
-    }
-
-    @And("User Searches for {string} car")
-    public void user_searches_for_car(String carName) throws InterruptedException {
+    @And("I Search for {string} car")
+    public void I_search_for_car(String carName) throws InterruptedException {
         homePagePOM.keywordSearch(carName);
     }
 
-    @Then("User should see the search refine page having {string}")
-    public void search_suggestions_dropdown_should_be_visible(String keyword) throws InterruptedException {
+    @Then("I should see the search refine page having {string}")
+    public void I_should_see_the_search_refine_page_having(String keyword) throws InterruptedException {
         homePagePOM.verifySearchSuggestions();
         searchRefinePOM.verifyKeyword(keyword);
     }
